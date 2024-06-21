@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Demon's Days</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/game-icon.png" />
+</head>
+
+<body class="body" onload="vikingRunAnimationStart();" onkeyup="keyListener(event);">
+
+    <div class="start-window" id="start-window">
+
+        <div class="start-row1">
+
+            <div class="start-box">
+
+                <div class="main-title"></div>
+
+                <div class="newgame">
+
+                    <div class="newgame-row1"></div>
+
+                    <div class="newgame-row2">
+
+                        <div class="newgame-sound">
+                            <div class="newgame-sound-btn1" onclick="startWindowSoundPlay();" id="newgame-sound-btn1"></div>
+                            <div class="newgame-sound-btn2" onclick="startWindowSoundPause();" id="newgame-sound-btn2"></div>
+                        </div>
+
+                        <div class="startbtn-box">
+                            <div class="startbtn" onclick="gameStory();"></div>
+                        </div>
+
+                        <div class="aboutus" onclick="infoBoxMoveUpStart(); btnClickSoundPlay();"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="game-over-window" id="game-over-window">
+            <div class="game-over-box" id="game-over-box">
+                <div class="game-over-score-lable">Score</div>
+                <div class="game-over-score" id="game-over-score"></div>
+                <div class="main-menu-box">
+                    <div class="main-menu" onclick="gameClose();"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-win-window" id="game-win-window">
+            <div class="game-win-box" id="game-win-box">
+                <div class="game-over-score-lable">Score</div>
+                <div class="game-over-score" id="game-win-score"></div>
+                <div class="main-menu-box">
+                    <div class="main-menu" onclick="gameClose();"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="start-row2">
+            <div class="main-instruction-box" id="main-instruction-box">
+                <div class="main-instruction">
+                    <div class="main-instruction-close-btn" onclick="infoBoxMoveDownStart();"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main-box" id="main-box">
+
+        <div class="main-colunm1"></div>
+
+        <div class="main-colunm2">
+
+            <div class="main-row1">
+
+                <div class="profile-box">
+                    <img src="images/profile0.png" class="profile" id="profile" />
+                </div>
+
+                <div class="score-box">
+                    <div class="score-bar" id="score-bar">
+                        <div class="score-icon"></div>
+                        <div class="score" id="score">0</div>
+                    </div>
+                </div>
+
+                <div class="progress-box">
+                    <div class="layer1">
+                        <img src="images/layer2.png" class="layer2" id="layer2" />
+                    </div>
+                    <img src="images/layer4.png" class="layer3" id="layer3" />
+                </div>
+
+                <div class="level-box">
+
+                    <div class="level1">
+                        <img src="images/level1.png" class="level1-img" id="level1-img" />
+                    </div>
+                    <div class="level2">
+                        <img src="images/level1.png" class="level1-img" id="level2-img" />
+                    </div>
+                    <div class="level3">
+                        <img src="images/level1.png" class="level1-img" id="level3-img" />
+                    </div>
+                    <div class="level4">
+                        <img src="images/level1.png" class="level1-img" id="level4-img" />
+                    </div>
+                    <div class="level5">
+                        <img src="images/level1.png" class="level1-img" id="level5-img" />
+                    </div>
+
+                </div>
+
+                <div class="close-box">
+                    <div class="close-btn" onclick="gameClose();"></div>
+                </div>
+
+            </div>
+
+            <div class="main-row2">
+
+                <div class="background-layer1" id="background"></div>
+                <div class="objects1" id="objects"></div>
+                <img src="images/viking1/ 1.png" class="viking" id="viking" />
+
+                <div class="next-box" id="next-box">
+                    <div class="next-btn" onclick="nextBtnAnimation(); btnClickSoundPlay();">Next</div>
+                </div>
+
+                <div class="game-story" id="game-story">
+                    <div class="story-box">
+                        <div class="story-image"></div>
+                        <div class="story">Demons have been attacking our kingdom for the past two years. And so we lost the kingdom...but our armies are ready for the final battle...Now our time has come. We have to show our power to the demons.<br> Your task is to escape
+                            from the demons and travel to your castle.</div>
+                        <div class="story-btn-box">
+                            <div class="storybtn" onclick="gameStart();"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="main-row3"></div>
+
+        </div>
+
+        <div class="main-colunm3">
+
+            <div class="info-box">
+
+                <div class="info">
+                    <div class="info-btn" onclick="inGameInfoAnimation();"></div>
+                </div>
+
+                <div class="volume-box">
+
+                    <div class="volume">
+
+                        <div class="volume-panal">
+                            <div class="volume-icon"></div>
+                            <div class="volume-up" onclick="mainSoundVolumeUp();"></div>
+                            <div class="volume-down" onclick="mainSoundVolumeDown();"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ingame-info-box" id="ingame-info-box"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
